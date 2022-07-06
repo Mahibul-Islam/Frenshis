@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
+:root {
+    --primary: #0d6efd;
+    --dark: #21252f;
+    --body: #888;
+    --white: #ffffff;
+    --pink: #F347BF;
+    --box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: "Sora", sans-serif;
+    line-height: 1.7;
+    color: var(--body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display-4 {
+    color: var(--dark);
+    font-weight: 700;
+}
+
+a {
+    color: var(--dark);
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+
+/* navabr section start here */
+
+.navbar {
+    box-shadow: var(--box-shadow);
+}
+
+.logo {
+    font-size: 35px;
+    color: var(--pink) !important;
+    font-weight: bold;
+}
+
+.btn {
+    background: var(--pink);
+    color: var(--white);
+    border-radius: 0;
+    padding: 10px 15px;
+}
+
+.btn:hover {
+    color: var(--white);
+    background: #3c052c;
+}
+
+.btn-outline-light {
+    border-radius: 0;
+    border: 2px solid white;
+    padding: 11px 15px;
+}
+
+.navbar .nav-link {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.navbar .nav-link.active {
+    color: var(--pink) !important;
+}
+
+
+/* navbar section end here */
+
+
+/* bannner section start here */
+
+.banner {
+    background-image: url(../img/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 2;
+}
+
+.banner::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(43, 20, 51, 0.8);
+    z-index: -1;
+}
+
+
+/* banner section end here */
+
+
+/* services section start here */
+
+.services_heading {
+    color: var(--pink);
+}
+
+.card-effect {
+    box-shadow: var(--box-shadow);
+    background-color: var(--white);
+    padding: 25px;
+    transition: all 0.35s ease;
+}
+
+.card-effect:hover {
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+.iconbox {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--pink);
+    color: var(--white);
+    font-size: 32px;
+    border-radius: 100px;
+}
+
+.service {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.service::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background-color: var(--pink);
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.service:hover .iconbox {
+    background-color: var(--white);
+    color: var(--pink);
+}
+
+.service:hover h5,
+.service:hover p {
+    color: var(--white);
+}
+
+.service:hover::after {
+    opacity: 1;
+    top: 0;
+}
+
+
+/* services section end here */
+
+
+/* features section start here */
+
+.col-img {
+    background-image: url(../img/cover2.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 500px;
+}
+
+
+/* features section end here */
+
+
+/* portfolio section start here */
+
+.portfolio_heading {
+    color: var(--pink);
+}
+
+.project {
+    position: relative;
+    overflow: hidden;
+}
+
+.project .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 20, 51, 0.8);
+    padding: 30px;
+    display: flex;
+    align-items: flex-end;
+    transition: all 0.4s ease;
+    opacity: 0;
+}
+
+.project img {
+    transition: all 0.4s ease;
+}
+
+.project:hover .overlay {
+    opacity: 1;
+}
+
+.project:hover img {
+    transform: scale(1.1);
+}
+
+
+/* portfolio section end here */
+
+
+/* pricing section start here */
+
+.heading_priching {
+    color: var(--pink);
+}
+
+.pricing i {
+    font-size: 20px;
+    color: var(--pink);
+}
+
+
+/* prcing section end here */
+
+
+/* team section start here */
+
+.heading_team {
+    color: var(--pink);
+}
+
+.team-member img {
+    width: 125px;
+    height: 125px;
+    border-radius: 100px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons a {
+    width: 34px;
+    height: 34px;
+    background-color: var(--pink);
+    border-radius: 2px solid var(--pink);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    margin-left: 5px;
+    transition: all 0.4s ease;
+    border: 2px solid var(--pink);
+}
+
+.social-icons a:hover {
+    color: var(--pink);
+    background-color: transparent;
+    border-color: var(--pink);
+}
+
+
+/* team section end here */
+
+
+/* blog section start here */
+
+.heading_blog {
+    color: var(--pink);
+}
+
+
+/* blog section start here */
+
+
+/* contact section start here */
+
+.contact_heading {
+    color: var(--pink);
+}
+
+form input.form-control {
+    height: 56px;
+}
+
+form .form-control {
+    border: 1px solid white;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+form .form-control:focus {
+    box-shadow: none;
+    border-color: var(--pink);
+}
+
+
+/* contact section end here */
+
+
+/* footer section start here */
+
+.footer_top {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    background-color: var(--dark);
+}
+
+.logo_footer {
+    color: var(--white);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.footer_top a {
+    color: var(--body);
+}
+
+.footer_top a:hover {
+    color: var(--white);
+}
+
+.footer-bottom {
+    background-color: #242933;
+}
+
+
+/* footer section end here */
